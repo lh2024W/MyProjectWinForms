@@ -28,222 +28,239 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
+            Select = new Button();
+            Distinct = new Button();
+            Where = new Button();
+            GroupBy = new Button();
+            Max = new Button();
+            Subqueries = new Button();
+            OrderBy = new Button();
+            Limit = new Button();
+            Min = new Button();
+            Like = new Button();
+            Aliases = new Button();
+            InnerJoin = new Button();
+            Avg = new Button();
+            Count = new Button();
+            AndOr = new Button();
+            Coalesce = new Button();
+            Sum = new Button();
             SuspendLayout();
             // 
-            // button1
+            // Select
             // 
-            button1.Location = new Point(12, 25);
-            button1.Name = "button1";
-            button1.Size = new Size(272, 29);
-            button1.TabIndex = 17;
-            button1.Text = "SELECT Introduction";
-            button1.UseVisualStyleBackColor = true;
+            Select.Location = new Point(12, 25);
+            Select.Name = "Select";
+            Select.Size = new Size(272, 29);
+            Select.TabIndex = 17;
+            Select.Text = "SELECT Introduction";
+            Select.UseVisualStyleBackColor = true;
+            Select.Click += Select_Click;
             // 
-            // button2
+            // Distinct
             // 
-            button2.Location = new Point(12, 74);
-            button2.Name = "button2";
-            button2.Size = new Size(272, 29);
-            button2.TabIndex = 18;
-            button2.Text = "DISTINCT";
-            button2.UseVisualStyleBackColor = true;
+            Distinct.Location = new Point(12, 74);
+            Distinct.Name = "Distinct";
+            Distinct.Size = new Size(272, 29);
+            Distinct.TabIndex = 18;
+            Distinct.Text = "DISTINCT";
+            Distinct.UseVisualStyleBackColor = true;
+            Distinct.Click += Distinct_Click;
             // 
-            // button3
+            // Where
             // 
-            button3.Location = new Point(12, 123);
-            button3.Name = "button3";
-            button3.Size = new Size(272, 29);
-            button3.TabIndex = 19;
-            button3.Text = "WHERE";
-            button3.UseVisualStyleBackColor = true;
+            Where.Location = new Point(12, 123);
+            Where.Name = "Where";
+            Where.Size = new Size(272, 29);
+            Where.TabIndex = 19;
+            Where.Text = "WHERE";
+            Where.UseVisualStyleBackColor = true;
+            Where.Click += Where_Click;
             // 
-            // button4
+            // GroupBy
             // 
-            button4.Location = new Point(12, 173);
-            button4.Name = "button4";
-            button4.Size = new Size(272, 29);
-            button4.TabIndex = 20;
-            button4.Text = "GROUP BY";
-            button4.UseVisualStyleBackColor = true;
+            GroupBy.Location = new Point(12, 173);
+            GroupBy.Name = "GroupBy";
+            GroupBy.Size = new Size(272, 29);
+            GroupBy.TabIndex = 20;
+            GroupBy.Text = "GROUP BY";
+            GroupBy.UseVisualStyleBackColor = true;
+            GroupBy.Click += GroupBy_Click;
             // 
-            // button5
+            // Max
             // 
-            button5.Location = new Point(12, 222);
-            button5.Name = "button5";
-            button5.Size = new Size(272, 29);
-            button5.TabIndex = 21;
-            button5.Text = "MAX";
-            button5.UseVisualStyleBackColor = true;
+            Max.Location = new Point(12, 222);
+            Max.Name = "Max";
+            Max.Size = new Size(272, 29);
+            Max.TabIndex = 21;
+            Max.Text = "MAX";
+            Max.UseVisualStyleBackColor = true;
+            Max.Click += Max_Click;
             // 
-            // button6
+            // Subqueries
             // 
-            button6.Location = new Point(12, 267);
-            button6.Name = "button6";
-            button6.Size = new Size(272, 29);
-            button6.TabIndex = 22;
-            button6.Text = "Subqueries";
-            button6.UseVisualStyleBackColor = true;
+            Subqueries.Location = new Point(12, 267);
+            Subqueries.Name = "Subqueries";
+            Subqueries.Size = new Size(272, 29);
+            Subqueries.TabIndex = 22;
+            Subqueries.Text = "Subqueries";
+            Subqueries.UseVisualStyleBackColor = true;
+            Subqueries.Click += Subqueries_Click;
             // 
-            // button7
+            // OrderBy
             // 
-            button7.Location = new Point(12, 321);
-            button7.Name = "button7";
-            button7.Size = new Size(272, 29);
-            button7.TabIndex = 23;
-            button7.Text = "ORDER BY";
-            button7.UseVisualStyleBackColor = true;
+            OrderBy.Location = new Point(12, 321);
+            OrderBy.Name = "OrderBy";
+            OrderBy.Size = new Size(272, 29);
+            OrderBy.TabIndex = 23;
+            OrderBy.Text = "ORDER BY";
+            OrderBy.UseVisualStyleBackColor = true;
+            OrderBy.Click += OrderBy_Click;
             // 
-            // button8
+            // Limit
             // 
-            button8.Location = new Point(12, 366);
-            button8.Name = "button8";
-            button8.Size = new Size(272, 29);
-            button8.TabIndex = 24;
-            button8.Text = "LIMIT";
-            button8.UseVisualStyleBackColor = true;
+            Limit.Location = new Point(12, 366);
+            Limit.Name = "Limit";
+            Limit.Size = new Size(272, 29);
+            Limit.TabIndex = 24;
+            Limit.Text = "LIMIT";
+            Limit.UseVisualStyleBackColor = true;
+            Limit.Click += Limit_Click;
             // 
-            // button9
+            // Min
             // 
-            button9.Location = new Point(12, 409);
-            button9.Name = "button9";
-            button9.Size = new Size(272, 29);
-            button9.TabIndex = 25;
-            button9.Text = "MIN";
-            button9.UseVisualStyleBackColor = true;
+            Min.Location = new Point(12, 409);
+            Min.Name = "Min";
+            Min.Size = new Size(272, 29);
+            Min.TabIndex = 25;
+            Min.Text = "MIN";
+            Min.UseVisualStyleBackColor = true;
+            Min.Click += Min_Click;
             // 
-            // button10
+            // Like
             // 
-            button10.Location = new Point(328, 25);
-            button10.Name = "button10";
-            button10.Size = new Size(272, 29);
-            button10.TabIndex = 26;
-            button10.Text = "LIKE";
-            button10.UseVisualStyleBackColor = true;
+            Like.Location = new Point(328, 25);
+            Like.Name = "Like";
+            Like.Size = new Size(272, 29);
+            Like.TabIndex = 26;
+            Like.Text = "LIKE";
+            Like.UseVisualStyleBackColor = true;
+            Like.Click += Like_Click;
             // 
-            // button11
+            // Aliases
             // 
-            button11.Location = new Point(328, 74);
-            button11.Name = "button11";
-            button11.Size = new Size(272, 29);
-            button11.TabIndex = 27;
-            button11.Text = "Aliases";
-            button11.UseVisualStyleBackColor = true;
+            Aliases.Location = new Point(328, 74);
+            Aliases.Name = "Aliases";
+            Aliases.Size = new Size(272, 29);
+            Aliases.TabIndex = 27;
+            Aliases.Text = "Aliases";
+            Aliases.UseVisualStyleBackColor = true;
+            Aliases.Click += Aliases_Click;
             // 
-            // button12
+            // InnerJoin
             // 
-            button12.Location = new Point(328, 123);
-            button12.Name = "button12";
-            button12.Size = new Size(272, 29);
-            button12.TabIndex = 28;
-            button12.Text = "INNER JOIN";
-            button12.UseVisualStyleBackColor = true;
+            InnerJoin.Location = new Point(328, 123);
+            InnerJoin.Name = "InnerJoin";
+            InnerJoin.Size = new Size(272, 29);
+            InnerJoin.TabIndex = 28;
+            InnerJoin.Text = "INNER JOIN";
+            InnerJoin.UseVisualStyleBackColor = true;
+            InnerJoin.Click += InnerJoin_Click;
             // 
-            // button13
+            // Avg
             // 
-            button13.Location = new Point(328, 173);
-            button13.Name = "button13";
-            button13.Size = new Size(272, 29);
-            button13.TabIndex = 29;
-            button13.Text = "AVG";
-            button13.UseVisualStyleBackColor = true;
+            Avg.Location = new Point(328, 173);
+            Avg.Name = "Avg";
+            Avg.Size = new Size(272, 29);
+            Avg.TabIndex = 29;
+            Avg.Text = "AVG";
+            Avg.UseVisualStyleBackColor = true;
+            Avg.Click += Avg_Click;
             // 
-            // button14
+            // Count
             // 
-            button14.Location = new Point(328, 222);
-            button14.Name = "button14";
-            button14.Size = new Size(272, 29);
-            button14.TabIndex = 30;
-            button14.Text = "COUNT";
-            button14.UseVisualStyleBackColor = true;
+            Count.Location = new Point(328, 222);
+            Count.Name = "Count";
+            Count.Size = new Size(272, 29);
+            Count.TabIndex = 30;
+            Count.Text = "COUNT";
+            Count.UseVisualStyleBackColor = true;
+            Count.Click += Count_Click;
             // 
-            // button15
+            // AndOr
             // 
-            button15.Location = new Point(328, 267);
-            button15.Name = "button15";
-            button15.Size = new Size(272, 29);
-            button15.TabIndex = 31;
-            button15.Text = "AND/OR";
-            button15.UseVisualStyleBackColor = true;
+            AndOr.Location = new Point(328, 267);
+            AndOr.Name = "AndOr";
+            AndOr.Size = new Size(272, 29);
+            AndOr.TabIndex = 31;
+            AndOr.Text = "AND/OR";
+            AndOr.UseVisualStyleBackColor = true;
+            AndOr.Click += AndOr_Click;
             // 
-            // button16
+            // Coalesce
             // 
-            button16.Location = new Point(328, 321);
-            button16.Name = "button16";
-            button16.Size = new Size(272, 29);
-            button16.TabIndex = 32;
-            button16.Text = "COALESCE";
-            button16.UseVisualStyleBackColor = true;
+            Coalesce.Location = new Point(328, 321);
+            Coalesce.Name = "Coalesce";
+            Coalesce.Size = new Size(272, 29);
+            Coalesce.TabIndex = 32;
+            Coalesce.Text = "COALESCE";
+            Coalesce.UseVisualStyleBackColor = true;
+            Coalesce.Click += Coalesce_Click;
             // 
-            // button17
+            // Sum
             // 
-            button17.Location = new Point(328, 366);
-            button17.Name = "button17";
-            button17.Size = new Size(272, 29);
-            button17.TabIndex = 33;
-            button17.Text = "SUM";
-            button17.UseVisualStyleBackColor = true;
+            Sum.Location = new Point(328, 366);
+            Sum.Name = "Sum";
+            Sum.Size = new Size(272, 29);
+            Sum.TabIndex = 33;
+            Sum.Text = "SUM";
+            Sum.UseVisualStyleBackColor = true;
+            Sum.Click += Sum_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(634, 450);
-            Controls.Add(button17);
-            Controls.Add(button16);
-            Controls.Add(button15);
-            Controls.Add(button14);
-            Controls.Add(button13);
-            Controls.Add(button12);
-            Controls.Add(button11);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(Sum);
+            Controls.Add(Coalesce);
+            Controls.Add(AndOr);
+            Controls.Add(Count);
+            Controls.Add(Avg);
+            Controls.Add(InnerJoin);
+            Controls.Add(Aliases);
+            Controls.Add(Like);
+            Controls.Add(Min);
+            Controls.Add(Limit);
+            Controls.Add(OrderBy);
+            Controls.Add(Subqueries);
+            Controls.Add(Max);
+            Controls.Add(GroupBy);
+            Controls.Add(Where);
+            Controls.Add(Distinct);
+            Controls.Add(Select);
             Name = "Form3";
-            Text = "Form3";
+            Text = "Библиотека";
             ResumeLayout(false);
         }
 
         #endregion
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Button button17;
+        private Button Select;
+        private Button Distinct;
+        private Button Where;
+        private Button GroupBy;
+        private Button Max;
+        private Button Subqueries;
+        private Button OrderBy;
+        private Button Limit;
+        private Button Min;
+        private Button Like;
+        private Button Aliases;
+        private Button InnerJoin;
+        private Button Avg;
+        private Button Count;
+        private Button AndOr;
+        private Button Coalesce;
+        private Button Sum;
     }
 }

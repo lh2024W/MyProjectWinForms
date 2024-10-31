@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            TaskTextBox = new TextBox();
             label2 = new Label();
             textBox2 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            buttonLibrary = new Button();
             button5 = new Button();
             button6 = new Button();
             groupBox1 = new GroupBox();
@@ -51,13 +51,14 @@
             label1.TabIndex = 0;
             label1.Text = "Задание";
             // 
-            // textBox1
+            // TaskTextBox
             // 
-            textBox1.Location = new Point(37, 86);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(501, 105);
-            textBox1.TabIndex = 1;
+            TaskTextBox.Location = new Point(37, 86);
+            TaskTextBox.Multiline = true;
+            TaskTextBox.Name = "TaskTextBox";
+            TaskTextBox.Size = new Size(501, 105);
+            TaskTextBox.TabIndex = 1;
+            TaskTextBox.TextChanged += TaskTextBox_TextChanged;
             // 
             // label2
             // 
@@ -103,14 +104,15 @@
             button3.Text = "Посмотреть все таблицы";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonLibrary
             // 
-            button4.Location = new Point(16, 101);
-            button4.Name = "button4";
-            button4.Size = new Size(199, 29);
-            button4.TabIndex = 7;
-            button4.Text = "Библиотека";
-            button4.UseVisualStyleBackColor = true;
+            buttonLibrary.Location = new Point(16, 101);
+            buttonLibrary.Name = "buttonLibrary";
+            buttonLibrary.Size = new Size(199, 29);
+            buttonLibrary.TabIndex = 7;
+            buttonLibrary.Text = "Библиотека";
+            buttonLibrary.UseVisualStyleBackColor = true;
+            buttonLibrary.Click += buttonLibrary_Click;
             // 
             // button5
             // 
@@ -134,7 +136,7 @@
             // 
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button6);
-            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(buttonLibrary);
             groupBox1.Controls.Add(button5);
             groupBox1.Location = new Point(557, 72);
             groupBox1.Name = "groupBox1";
@@ -152,7 +154,7 @@
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(TaskTextBox);
             Controls.Add(label1);
             Name = "Form2";
             Text = "Form2";
@@ -164,13 +166,13 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox TaskTextBox;
         private Label label2;
         private TextBox textBox2;
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
+        private Button buttonLibrary;
         private Button button5;
         private Button button6;
         private GroupBox groupBox1;

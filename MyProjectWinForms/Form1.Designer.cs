@@ -33,7 +33,7 @@
             textBox1 = new TextBox();
             linkLabel1 = new LinkLabel();
             label2 = new Label();
-            textBox2 = new TextBox();
+            textBoxUserName = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -42,8 +42,9 @@
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
-            button1.Text = "отправить";
+            button1.Text = "Отправить";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -61,6 +62,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(255, 278);
             textBox1.TabIndex = 2;
+            
             // 
             // linkLabel1
             // 
@@ -71,6 +73,7 @@
             linkLabel1.TabIndex = 3;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Информация о подсчете баллов";
+            linkLabel1.Click += linkLabel1_Click;
             // 
             // label2
             // 
@@ -81,19 +84,21 @@
             label2.TabIndex = 4;
             label2.Text = "Здравствуйте, введите Ваше имя";
             // 
-            // textBox2
+            // textBoxUserName
             // 
-            textBox2.Location = new Point(137, 202);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 5;
+            textBoxUserName.Location = new Point(137, 202);
+            textBoxUserName.Name = "textBoxUserName";
+            textBoxUserName.PlaceholderText = "Введите Ваше имя";
+            textBoxUserName.Size = new Size(125, 27);
+            textBoxUserName.TabIndex = 5;
+            textBoxUserName.TextChanged += textBoxUserName_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(791, 440);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxUserName);
             Controls.Add(label2);
             Controls.Add(linkLabel1);
             Controls.Add(textBox1);
@@ -112,6 +117,6 @@
         private TextBox textBox1;
         private LinkLabel linkLabel1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox textBoxUserName;
     }
 }
