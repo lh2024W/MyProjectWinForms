@@ -34,12 +34,12 @@
             label2 = new Label();
             textBox2 = new TextBox();
             button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             buttonLibrary = new Button();
             button5 = new Button();
             button6 = new Button();
             groupBox1 = new GroupBox();
+            buttonNext = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,12 +57,13 @@
             // 
             // TaskTextBox
             // 
+            TaskTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             TaskTextBox.Location = new Point(37, 49);
             TaskTextBox.Multiline = true;
             TaskTextBox.Name = "TaskTextBox";
+            TaskTextBox.ReadOnly = true;
             TaskTextBox.Size = new Size(501, 105);
             TaskTextBox.TabIndex = 1;
-            TaskTextBox.TextChanged += TaskTextBox_TextChanged;
             // 
             // label2
             // 
@@ -83,63 +84,61 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(501, 187);
             textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(406, 409);
+            button1.Location = new Point(180, 409);
             button1.Name = "button1";
             button1.Size = new Size(132, 44);
             button1.TabIndex = 4;
             button1.Text = "Отправить";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(206, 409);
-            button2.Name = "button2";
-            button2.Size = new Size(143, 44);
-            button2.TabIndex = 5;
-            button2.Text = "Удалить";
-            button2.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.ControlLight;
             button3.Location = new Point(16, 37);
             button3.Name = "button3";
             button3.Size = new Size(199, 29);
             button3.TabIndex = 6;
             button3.Text = "Посмотреть все таблицы";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // buttonLibrary
             // 
+            buttonLibrary.BackColor = SystemColors.ControlLight;
             buttonLibrary.Location = new Point(16, 101);
             buttonLibrary.Name = "buttonLibrary";
             buttonLibrary.Size = new Size(199, 29);
             buttonLibrary.TabIndex = 7;
             buttonLibrary.Text = "Библиотека";
-            buttonLibrary.UseVisualStyleBackColor = true;
+            buttonLibrary.UseVisualStyleBackColor = false;
             buttonLibrary.Click += buttonLibrary_Click;
             // 
             // button5
             // 
+            button5.BackColor = SystemColors.ControlLight;
             button5.Location = new Point(16, 168);
             button5.Name = "button5";
             button5.Size = new Size(199, 29);
             button5.TabIndex = 8;
             button5.Text = "Подсказать";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
+            button6.BackColor = SystemColors.ControlLight;
             button6.Location = new Point(16, 233);
             button6.Name = "button6";
             button6.Size = new Size(199, 29);
             button6.TabIndex = 9;
             button6.Text = "Показать решение";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // groupBox1
             // 
@@ -154,6 +153,17 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
+            // buttonNext
+            // 
+            buttonNext.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            buttonNext.Location = new Point(406, 409);
+            buttonNext.Name = "buttonNext";
+            buttonNext.Size = new Size(132, 44);
+            buttonNext.TabIndex = 11;
+            buttonNext.Text = "Далее";
+            buttonNext.UseVisualStyleBackColor = true;
+            buttonNext.Click += buttonNext_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -161,15 +171,15 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(815, 465);
+            Controls.Add(buttonNext);
             Controls.Add(groupBox1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(TaskTextBox);
             Controls.Add(label1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Задание 1";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -182,11 +192,11 @@
         private Label label2;
         private TextBox textBox2;
         private Button button1;
-        private Button button2;
         private Button button3;
         private Button buttonLibrary;
         private Button button5;
         private Button button6;
         private GroupBox groupBox1;
+        private Button buttonNext;
     }
 }

@@ -62,10 +62,12 @@
             // 
             // textBoxRatingUsers
             // 
+            textBoxRatingUsers.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Italic, GraphicsUnit.Point, 204);
             textBoxRatingUsers.Location = new Point(490, 55);
             textBoxRatingUsers.Multiline = true;
             textBoxRatingUsers.Name = "textBoxRatingUsers";
             textBoxRatingUsers.ReadOnly = true;
+            textBoxRatingUsers.ScrollBars = ScrollBars.Vertical;
             textBoxRatingUsers.Size = new Size(255, 278);
             textBoxRatingUsers.TabIndex = 2;
             // 

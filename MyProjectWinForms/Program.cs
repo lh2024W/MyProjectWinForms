@@ -1,7 +1,5 @@
-//using MyProjectWinForms;
-//using Microsoft.EntityFrameworkCore.Storage;
-//using MyProjectWinForms.Data;
-//using ApplicationContext = MyProjectWinForms.Data.ApplicationContext;
+
+using MyProjectWinForms.Data;
 
 namespace MyProjectWinForms
 {
@@ -18,10 +16,12 @@ namespace MyProjectWinForms
             // see https://aka.ms/applicationconfiguration.
 
             //ApplicationConfiguration.Initialize();
+
             Application.Run(new Form1());
-
-
             
+
+
+
         }
 
 

@@ -1,5 +1,4 @@
 ﻿using MyProjectWinForms.Data;
-using MyProjectWinForms.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,17 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MyProjectWinForms
 {
-    public partial class Form2 : Form
+    public partial class Form4 : Form
     {
-        public Form2()
+        public Form4()
         {
             InitializeComponent();
             ExerciseLoad();
-            
         }
 
         private void buttonLibrary_Click(object sender, EventArgs e)
@@ -32,17 +29,17 @@ namespace MyProjectWinForms
         {
             Data.ApplicationContext DbContext() => new ApplicationContextFactory().CreateDbContext();
             var exercises = new DbInit().LoadFromDatabaseExercise(DbContext());
-            var ex = new DbInit().ExerciseById(DbContext(), exercises, 1);
+            var ex = new DbInit().ExerciseById(DbContext(), exercises, 2);
             TaskTextBox.Text = ex.NameExercise;
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonAnswer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("SELECT * \r\nFROM SALARIES;");
+            MessageBox.Show("SELECT Professor_Name \r\nFROM SALARIES;");
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Используйте SELECT Introduction!");
         }
@@ -56,7 +53,7 @@ namespace MyProjectWinForms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSend_Click(object sender, EventArgs e)
         {
             string request = textBox2.Text;
             if (string.IsNullOrEmpty(request))
@@ -70,9 +67,10 @@ namespace MyProjectWinForms
         {
             Data.ApplicationContext DbContext() => new ApplicationContextFactory().CreateDbContext();
 
-            var answer = new DbInit().AnswerById(DbContext(), 1);
+            var answer = new DbInit().AnswerById(DbContext(), 2);
             if (request == answer.ToString())
             {
+
                 MessageBox.Show("Поздравляю!\n\nВаш запрос написан верно!");
             }
             else
@@ -87,8 +85,8 @@ namespace MyProjectWinForms
             form.Show();
             this.Close();
 
-            Form4 form4 = new Form4();
-            form4.Show();
+            Form5 form5 = new Form5();
+            form5.Show();
         }
     }
 }

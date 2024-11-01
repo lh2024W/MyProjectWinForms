@@ -13,21 +13,7 @@ namespace MyProjectWinForms.Data
     {
         public void Init(ApplicationContext context, string name)
         {
-            //context.Database.EnsureDeleted();
-            //context.Database.EnsureCreated();
-
-            //if (!context.Users.Any())
-            //{
-            //    context.Users.AddRange(new User[]
-            //    {
-            //        new User { Name = "Liliya", NumberOfPoints = 100},
-            //        new User { Name = "Лилия", NumberOfPoints = 250},
-            //        new User { Name = "Alex", NumberOfPoints = 1050},
-            //        new User { Name = "Helen", NumberOfPoints = 1200},
-            //        new User { Name = "Karen", NumberOfPoints = 50}
-            //    });
-            //    context.SaveChanges();
-            //}
+                        
             User user = new User { Name = name, NumberOfPoints = 0 };
             if (context.Users.Any(u => u.Name == user.Name))
             {
@@ -39,29 +25,44 @@ namespace MyProjectWinForms.Data
                 context.Users.Add(user);
                 context.SaveChanges();
                 MessageBox.Show("Ваше имя добавлено.");
+
                 Form2 f = new Form2();
-                f.ShowDialog();
+                f.Show();
+
             }
         }
 
         public List<User> LoadFromDatabase(ApplicationContext context)
         {
-            var newList = context.Users.OrderBy(x => x.NumberOfPoints).ToList();
+            var newList = context.Users.OrderByDescending(x => x.NumberOfPoints).ToList();
             context.SaveChanges();
             return newList;
         }
 
-        public List<Models.Task> LoadFromDatabaseTask(ApplicationContext context)
+        public List<Exercise> LoadFromDatabaseExercise(ApplicationContext context)
         {
-            var task = context.Tasks.ToList();
+            var ex = context.Exercises.ToList();
             context.SaveChanges();
-            return task;
+            return ex;
         }
 
-        public Models.Task TaskById(ApplicationContext context, List<Models.Task> t, int id)
+        public Exercise ExerciseById(ApplicationContext context, List<Exercise> t, int id)
         {
-            var taskById = context.Tasks.FirstOrDefault(x => x.Id == id);
-            return taskById;
+            var exById = context.Exercises.FirstOrDefault(x => x.Id == id);
+            return exById;
+        }
+
+        public List<Answer> LoadFromDatabaseAnswer(ApplicationContext context)
+        {
+            var ans = context.Answers.ToList();
+            context.SaveChanges();
+            return ans;
+        }
+
+        public Answer AnswerById(ApplicationContext context, int id)
+        {
+            var ansById = context.Answers.FirstOrDefault(x => x.Id == id);
+            return ansById;
         }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace MyProjectWinForms.Models
 {
-    public class Task
+    public class Exercise
     {
         public int Id { get; set; }
-        public string TaskName { get; set; }
+        public string NameExercise { get; set; }
 
 
         public override string ToString()
         {
-            return String.Format("Задание № - {0}\n{1}\n", Id, TaskName);
+            return String.Format(NameExercise);
         }
     }
 }

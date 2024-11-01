@@ -18,7 +18,7 @@ namespace MyProjectWinForms.Models
 
         public override string ToString()
         {
-            return String.Format("Name - {0}\nNumber of points - {1}\n", Name, NumberOfPoints);
+            return String.Format(Name + "\t\t\t" + NumberOfPoints);
         }
 
     }

@@ -11,6 +11,7 @@ namespace MyProjectWinForms
         public Form1()
         {
             InitializeComponent();
+            Load();
         }
 
         private void textBoxUserName_TextChanged(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace MyProjectWinForms
                 MessageBox.Show("Введите имя.");
             }
             AddUser(name);
+            //this.Close();
         }
 
         private void linkLabel1_Click(object sender, EventArgs e)
@@ -46,18 +48,19 @@ namespace MyProjectWinForms
                 "25 баллов - если воспользовались библиотекой\n\n10 баллов - если посмотрели наше решение\n\n");
         }
 
-        private void textBoxRatingUsers_TextChanged(object sender, EventArgs e)
+        private void Load()
         {
-
             ApplicationContext DbContext() => new ApplicationContextFactory().CreateDbContext();
 
             var users = new DbInit().LoadFromDatabase(DbContext());
 
+            
             foreach (var user in users)
             {
                 textBoxRatingUsers.Text += user.ToString() + Environment.NewLine;
                 //textBoxRatingUsers.AppendText(user.ToString() + Environment.NewLine);
             }
         }
+        
     }
 }
