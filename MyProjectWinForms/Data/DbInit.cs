@@ -58,9 +58,9 @@ namespace MyProjectWinForms.Data
             return task;
         }
 
-        public Models.Task TaskById (ApplicationContext context, List<Models.Task> t, int id)
+        public Models.Task TaskById(ApplicationContext context, List<Models.Task> t, int id)
         {
-           var taskById = context.Tasks.FirstOrDefault(x => x.Id == id);
+            var taskById = context.Tasks.FirstOrDefault(x => x.Id == id);
             return taskById;
         }
     }

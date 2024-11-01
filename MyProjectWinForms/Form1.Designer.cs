@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
+            textBoxRatingUsers = new TextBox();
             linkLabel1 = new LinkLabel();
             label2 = new Label();
             textBoxUserName = new TextBox();
@@ -55,14 +56,14 @@
             label1.TabIndex = 1;
             label1.Text = "Рейтинг участников";
             // 
-            // textBox1
+            // textBoxRatingUsers
             // 
-            textBox1.Location = new Point(490, 55);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(255, 278);
-            textBox1.TabIndex = 2;
-            
+            textBoxRatingUsers.Location = new Point(490, 55);
+            textBoxRatingUsers.Multiline = true;
+            textBoxRatingUsers.Name = "textBoxRatingUsers";
+            textBoxRatingUsers.ReadOnly = true;
+            textBoxRatingUsers.Size = new Size(255, 278);
+            textBoxRatingUsers.TabIndex = 2;
             // 
             // linkLabel1
             // 
@@ -78,6 +79,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.ButtonShadow;
             label2.Location = new Point(93, 98);
             label2.Name = "label2";
             label2.Size = new Size(236, 20);
@@ -97,15 +99,17 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(791, 440);
             Controls.Add(textBoxUserName);
             Controls.Add(label2);
             Controls.Add(linkLabel1);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxRatingUsers);
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Регистрация";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,7 +118,7 @@
 
         private Button button1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textBoxRatingUsers;
         private LinkLabel linkLabel1;
         private Label label2;
         private TextBox textBoxUserName;

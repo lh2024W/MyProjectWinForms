@@ -46,7 +46,7 @@ namespace MyProjectWinForms
                 "25 баллов - если воспользовались библиотекой\n\n10 баллов - если посмотрели наше решение\n\n");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBoxRatingUsers_TextChanged(object sender, EventArgs e)
         {
 
             ApplicationContext DbContext() => new ApplicationContextFactory().CreateDbContext();
@@ -55,7 +55,8 @@ namespace MyProjectWinForms
 
             foreach (var user in users)
             {
-                textBox1.Text = user.ToString();
+                textBoxRatingUsers.Text += user.ToString() + Environment.NewLine;
+                //textBoxRatingUsers.AppendText(user.ToString() + Environment.NewLine);
             }
         }
     }
