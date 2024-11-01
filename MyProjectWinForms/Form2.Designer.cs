@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             label1 = new Label();
             TaskTextBox = new TextBox();
             label2 = new Label();
@@ -45,15 +46,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(37, 48);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(37, 18);
             label1.Name = "label1";
-            label1.Size = new Size(67, 20);
+            label1.Size = new Size(93, 28);
             label1.TabIndex = 0;
             label1.Text = "Задание";
             // 
             // TaskTextBox
             // 
-            TaskTextBox.Location = new Point(37, 86);
+            TaskTextBox.Location = new Point(37, 49);
             TaskTextBox.Multiline = true;
             TaskTextBox.Name = "TaskTextBox";
             TaskTextBox.Size = new Size(501, 105);
@@ -63,36 +67,41 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(37, 220);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label2.ForeColor = SystemColors.ActiveCaption;
+            label2.Location = new Point(37, 174);
             label2.Name = "label2";
-            label2.Size = new Size(134, 20);
+            label2.Size = new Size(194, 28);
             label2.TabIndex = 2;
             label2.Text = "Напишите запрос";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(37, 269);
+            textBox2.Location = new Point(37, 208);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(501, 126);
+            textBox2.Size = new Size(501, 187);
             textBox2.TabIndex = 3;
             // 
             // button1
             // 
-            button1.Location = new Point(434, 409);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.Location = new Point(406, 409);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(132, 44);
             button1.TabIndex = 4;
-            button1.Text = "отправить";
+            button1.Text = "Отправить";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(294, 409);
+            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button2.Location = new Point(206, 409);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(143, 44);
             button2.TabIndex = 5;
-            button2.Text = "удалить";
+            button2.Text = "Удалить";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -134,6 +143,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button6);
             groupBox1.Controls.Add(buttonLibrary);
@@ -148,7 +158,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(815, 465);
             Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(button1);

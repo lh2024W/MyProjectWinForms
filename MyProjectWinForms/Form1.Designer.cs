@@ -39,9 +39,10 @@
             // 
             // button1
             // 
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             button1.Location = new Point(153, 304);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(150, 37);
             button1.TabIndex = 0;
             button1.Text = "Отправить";
             button1.UseVisualStyleBackColor = true;
@@ -50,9 +51,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(556, 32);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(527, 29);
             label1.Name = "label1";
-            label1.Size = new Size(146, 20);
+            label1.Size = new Size(185, 23);
             label1.TabIndex = 1;
             label1.Text = "Рейтинг участников";
             // 
@@ -68,9 +72,13 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(490, 355);
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            linkLabel1.ForeColor = SystemColors.ActiveCaption;
+            linkLabel1.LinkColor = Color.FromArgb(192, 192, 255);
+            linkLabel1.Location = new Point(456, 363);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(236, 20);
+            linkLabel1.Size = new Size(317, 28);
             linkLabel1.TabIndex = 3;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Информация о подсчете баллов";
@@ -79,19 +87,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ButtonShadow;
-            label2.Location = new Point(93, 98);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label2.ForeColor = SystemColors.GradientActiveCaption;
+            label2.Location = new Point(30, 99);
             label2.Name = "label2";
-            label2.Size = new Size(236, 20);
+            label2.Size = new Size(413, 31);
             label2.TabIndex = 4;
             label2.Text = "Здравствуйте, введите Ваше имя";
             // 
             // textBoxUserName
             // 
+            textBoxUserName.BackColor = SystemColors.InactiveBorder;
             textBoxUserName.Location = new Point(137, 202);
             textBoxUserName.Name = "textBoxUserName";
             textBoxUserName.PlaceholderText = "Введите Ваше имя";
-            textBoxUserName.Size = new Size(125, 27);
+            textBoxUserName.Size = new Size(185, 27);
             textBoxUserName.TabIndex = 5;
             textBoxUserName.TextChanged += textBoxUserName_TextChanged;
             // 

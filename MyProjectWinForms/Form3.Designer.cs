@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             Select = new Button();
             Distinct = new Button();
             Where = new Button();
@@ -49,6 +50,7 @@
             // 
             // Select
             // 
+            Select.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Select.Location = new Point(12, 25);
             Select.Name = "Select";
             Select.Size = new Size(272, 29);
@@ -59,6 +61,7 @@
             // 
             // Distinct
             // 
+            Distinct.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Distinct.Location = new Point(12, 74);
             Distinct.Name = "Distinct";
             Distinct.Size = new Size(272, 29);
@@ -69,6 +72,7 @@
             // 
             // Where
             // 
+            Where.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Where.Location = new Point(12, 123);
             Where.Name = "Where";
             Where.Size = new Size(272, 29);
@@ -79,6 +83,7 @@
             // 
             // GroupBy
             // 
+            GroupBy.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             GroupBy.Location = new Point(12, 173);
             GroupBy.Name = "GroupBy";
             GroupBy.Size = new Size(272, 29);
@@ -89,6 +94,7 @@
             // 
             // Max
             // 
+            Max.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Max.Location = new Point(12, 222);
             Max.Name = "Max";
             Max.Size = new Size(272, 29);
@@ -99,6 +105,7 @@
             // 
             // Subqueries
             // 
+            Subqueries.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Subqueries.Location = new Point(12, 267);
             Subqueries.Name = "Subqueries";
             Subqueries.Size = new Size(272, 29);
@@ -109,6 +116,7 @@
             // 
             // OrderBy
             // 
+            OrderBy.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             OrderBy.Location = new Point(12, 321);
             OrderBy.Name = "OrderBy";
             OrderBy.Size = new Size(272, 29);
@@ -119,6 +127,7 @@
             // 
             // Limit
             // 
+            Limit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Limit.Location = new Point(12, 366);
             Limit.Name = "Limit";
             Limit.Size = new Size(272, 29);
@@ -129,6 +138,7 @@
             // 
             // Min
             // 
+            Min.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Min.Location = new Point(12, 409);
             Min.Name = "Min";
             Min.Size = new Size(272, 29);
@@ -139,6 +149,7 @@
             // 
             // Like
             // 
+            Like.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Like.Location = new Point(328, 25);
             Like.Name = "Like";
             Like.Size = new Size(272, 29);
@@ -149,6 +160,7 @@
             // 
             // Aliases
             // 
+            Aliases.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Aliases.Location = new Point(328, 74);
             Aliases.Name = "Aliases";
             Aliases.Size = new Size(272, 29);
@@ -159,6 +171,7 @@
             // 
             // InnerJoin
             // 
+            InnerJoin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             InnerJoin.Location = new Point(328, 123);
             InnerJoin.Name = "InnerJoin";
             InnerJoin.Size = new Size(272, 29);
@@ -169,6 +182,7 @@
             // 
             // Avg
             // 
+            Avg.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Avg.Location = new Point(328, 173);
             Avg.Name = "Avg";
             Avg.Size = new Size(272, 29);
@@ -179,6 +193,7 @@
             // 
             // Count
             // 
+            Count.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Count.Location = new Point(328, 222);
             Count.Name = "Count";
             Count.Size = new Size(272, 29);
@@ -189,6 +204,7 @@
             // 
             // AndOr
             // 
+            AndOr.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             AndOr.Location = new Point(328, 267);
             AndOr.Name = "AndOr";
             AndOr.Size = new Size(272, 29);
@@ -199,6 +215,7 @@
             // 
             // Coalesce
             // 
+            Coalesce.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Coalesce.Location = new Point(328, 321);
             Coalesce.Name = "Coalesce";
             Coalesce.Size = new Size(272, 29);
@@ -209,6 +226,7 @@
             // 
             // Sum
             // 
+            Sum.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Sum.Location = new Point(328, 366);
             Sum.Name = "Sum";
             Sum.Size = new Size(272, 29);
@@ -221,6 +239,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(634, 450);
             Controls.Add(Sum);
             Controls.Add(Coalesce);
